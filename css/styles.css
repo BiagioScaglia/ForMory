@@ -1,0 +1,232 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Temi Generali */
+body {
+    font-family: 'Raleway', sans-serif;
+    transition: all 0.3s ease-in-out;
+}
+
+body.romantic-theme {
+    background: linear-gradient(120deg, #ff9a9e 0%, #fad0c4 100%);
+    color: #333;
+}
+
+body.classic-theme {
+    background: linear-gradient(120deg, #e6e9f0 0%, #eef1f5 100%);
+    color: #333;
+}
+
+body.modern-theme {
+    background: linear-gradient(120deg, #4e54c8 0%, #8f94fb 100%);
+    color: #fff;
+}
+
+body.zelda-theme {
+    background: linear-gradient(120deg, #5c5c5c 0%, #8aa413 100%);
+    color: #f1e6d6;
+    font-family: 'Triforce', sans-serif; /* Supponendo che il font 'Triforce' sia caricato */
+}
+
+.stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/tiny-stars.png') repeat;
+    animation: twinkling 1.5s infinite;
+    z-index: -1;
+}
+
+@keyframes twinkling {
+    0% { opacity: 0.8; }
+    50% { opacity: 1; }
+    100% { opacity: 0.8; }
+}
+
+header {
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    position: relative;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+header h1 {
+    font-weight: 600;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.theme-selector {
+    margin-top: 10px;
+    text-align: right;
+}
+
+.theme-selector label {
+    margin-right: 10px;
+}
+
+.theme-selector select {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+main {
+    margin: 0 auto;
+    max-width: 800px;
+    padding-bottom: 40px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes fadeInDown {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+section {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.modern-theme section {
+    background: #3c3c3c;
+}
+
+body.zelda-theme section {
+    background: #2e5637;
+}
+
+section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 12px 25px;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #ff8566;
+    transform: translateY(-3px);
+}
+
+body.modern-theme button {
+    background-color: #8f94fb;
+}
+
+body.modern-theme button:hover {
+    background-color: #6c70eb;
+}
+
+body.zelda-theme button {
+    background-color: #7a9c3b;
+}
+
+body.zelda-theme button:hover {
+    background-color: #5f7a29;
+}
+
+#text-display, #phrase-display, #saved-messages p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.8;
+    text-align: left;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+body.modern-theme #text-display, 
+body.modern-theme #phrase-display, 
+body.modern-theme #saved-messages p {
+    background: #4e54c8;
+    color: white;
+}
+
+body.zelda-theme #text-display, 
+body.zelda-theme #phrase-display, 
+body.zelda-theme #saved-messages p {
+    background: #3e6047;
+    color: #e6dcca;
+}
+
+textarea {
+    width: 100%;
+    height: 120px;
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px solid #ddd;
+    font-family: 'Raleway', sans-serif;
+    resize: none;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+body.zelda-theme textarea {
+    background: #2e5637;
+    color: #e6dcca;
+    border: 1px solid #5f7a29;
+}
+
+textarea:focus {
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.15);
+    outline: none;
+}
+
+#saved-messages {
+    margin-top: 20px;
+    text-align: left;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+footer {
+    margin-top: 40px;
+    color: white;
+    font-size: 1.2rem;
+}
+
+body.classic-theme footer {
+    color: #333;
+}
+
+body.zelda-theme footer {
+    color: #e6dcca;
+}
